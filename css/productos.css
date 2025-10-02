@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Righteous&display=swap');
+
+body{
+    top: 0;
+    margin-top: 8%;
+    min-height:100vh;
+    background-color: rgb(127, 127, 127);
+}
+header{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+header .logo img{
+    height: 110px;
+    width: 150px;
+    border-radius: 20px;
+    margin: 0;
+}
+header nav{
+    margin-right:20px;
+}
+header nav ul li i{
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.3s;
+}
+header nav li i:hover{
+    color: rgb(255, 255, 255);
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li a{
+    color: rgb(255, 255, 255);
+    margin: o 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 40px;
+    font-family: "miniver"sans-serif;
+}
+header nav ul li a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 8px 13px;
+}
+.container-section .container h1{
+    text-align: center;
+    font-size: 50px; 
+    color: #000000;
+    font-family: "miniver" sans-serif;
+}
+.container-img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    width: 70%;
+    margin: 2% 490px;
+}
+.container-img .img{
+    background:linear-gradient(to right, #000000,#ffffffd8);
+    padding: 10px 10px;
+    text-align: center;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    background-size:250%;
+    color: #fff;
+    font-family: 'miniver' sans-serif;
+    transition: all 0.3s;
+}
+.container-img .img:hover{
+    transform: scale(1.2);
+}
+.container-img .img img{
+    height: 350px;
+    width: 350px;
+    border-radius: 30px;
+
+}
+
+.container-img .botones button{
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+.container-img .botones button:hover{
+    transform:scale(1.3);
+    color: #000000;
+}
