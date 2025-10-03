@@ -1,8 +1,11 @@
 body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/fondo.jpg');
+    background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2a004f;   
+
+
 }
 header{
     display: flex;
@@ -93,18 +96,46 @@ section .destacados h3{
     color: #ffffff;
     font-family: 'Arial Black', sans-serif;
 }
-section .destacados .container{
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-section .destacados .container .item{
+section .destacados .slider-frame{
     width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin: 50px auto 0;
+    border-radius: 10px;
+
+}
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    border-radius: 10px;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+.slider-frame li{
+    list-style: none;
+    width: 100%;
     border-radius: 10px;
 }
-section .destacados .container .item img{
+.slider-frame img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+@keyframes slide{
+    0% {margin-left: 0%;}
+    15% {margin-left: 0%;}
+
+    20% {margin-left: -100%;}
+    35% {margin-left: -100%;}
+
+    40% {margin-left: -200%;}
+    55% {margin-left: -200%;}
+
+    60% {margin-left: -300%;}
+    75% {margin-left: -300%;}
+
+    60% {margin-left: -200%;}
+    75% {margin-left: -200%;}
+
+    80% {margin-left: -100%;}
+    100% {margin-left: -100%;}
 }

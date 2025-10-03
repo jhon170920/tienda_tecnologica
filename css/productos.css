@@ -4,10 +4,11 @@ body{
     top: 0;
     margin-top: 8%;
     min-height:100vh;
-    background-color: rgb(127, 127, 127);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../img/fondo_producto.jpg');
+    background-size: cover;
 }
 header{
-    background-color: rgb(0, 0, 0);
+    background-color: #2a004f;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,12 +19,23 @@ header{
     left: 0;
     z-index: 100;
 }
+/*logo*/
+header .logo{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+header .logo h1{
+    color: white;
+    font-family: sans-serif;
+
+}
 header .logo img{
-    height: 110px;
-    width: 150px;
+    width: 100px;
     border-radius: 20px;
     margin: 0;
 }
+/*barra navegacion*/
 header nav{
     margin-right:20px;
 }
@@ -55,10 +67,11 @@ header nav ul li a:hover{
     color: rgb(255, 255, 255);
     padding: 8px 13px;
 }
+/*contenido principal*/
 .container-section .container h1{
     text-align: center;
     font-size: 50px; 
-    color: #000000;
+    color: #ffffff;
     font-family: "miniver" sans-serif;
 }
 .container-img{
