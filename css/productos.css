@@ -123,3 +123,27 @@ header nav ul li a:hover{
     transform:scale(1.1);
     color: #000000;
 }
+@media (max-width:728px){
+    .container-img{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 60px 4px;
+        width: 90%;
+        margin: 2% 80px;
+    }
+    .container-section .container h1{
+        text-align: center;
+        margin: 20px;
+        font-size: 30px; 
+    }
+    header nav{
+        margin-right:20px;
+    }
+    header .logo img{
+        width: 80px;
+    }
+    .carrito{
+        left: 90%;
+        font-size: 15px;
+    }
+}
