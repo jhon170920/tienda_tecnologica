@@ -29,6 +29,17 @@ header .logo img{
     height: 60px;
     align-items: center;
 }
+/*checkbox*/
+.menu-toggle{
+    display: none;
+    left: -9999px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
 /*barra navegacion*/
 header nav{
     color: #00bfff;
@@ -220,6 +231,24 @@ section .categoria .cont-card .cat-card:hover{
         height: auto;
         align-items: flex-start;
     }
+    /*menu hamburguesa*/
+    .menu-toggle{
+        display: none;
+}
+    .menu-icon{
+        display: block;
+        color: #ffffff;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    header .nav{
+        display: none;
+        width: 100%;
+        background-color: #2a004f;
+    }
+    .menu-toogle:checked ~ header .nav{
+        display: block;
+    }
     header .nav {
         margin: auto;
         padding: 0;
@@ -274,4 +303,5 @@ section .categoria .cont-card .cat-card:hover{
         height: auto;
         padding: 15px;
     }
+    
 }
