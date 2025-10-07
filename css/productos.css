@@ -35,6 +35,17 @@ header .logo img{
     border-radius: 20px;
     margin: 0;
 }
+/*checkbox*/
+.menu-toggle{
+    display: none;
+    left: -9999px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
 /*barra navegacion*/
 header nav{
     margin-right:70px;
@@ -123,27 +134,62 @@ header nav ul li a:hover{
     transform:scale(1.1);
     color: #000000;
 }
-@media (max-width:728px){
-    .container-img{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 60px 4px;
-        width: 90%;
-        margin: 2% 80px;
-    }
-    .container-section .container h1{
+@media (max-width:768px){
+    header{
+        display: flex;
+        align-items: center;
         text-align: center;
-        margin: 20px;
-        font-size: 30px; 
+        gap: 10px;
+        padding: 10px;
     }
-    header nav{
-        margin-right:20px;
+    header .logo{
+        margin: 0;
+        gap: 5px;
+        justify-content: left;
+    }
+    header .logo h1{
+        font-size: 20px;
+        text-align: left;
+        margin-top: 30px;
     }
     header .logo img{
-        width: 80px;
+        width: 50px;
+        height: auto;
+        align-items: flex-start;
     }
-    .carrito{
-        left: 90%;
+    /*menu hamburguesa*/
+    .menu-toggle{
+        display: none;
+}
+    .menu-icon{
+        display: block;
+        color: #ffffff;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    header .nav{
+        display: none;
+        width: 100%;
+        background-color: #2a004f;
+    }
+    .menu-toggle:checked ~ .nav{
+        display: block;
+    }
+    header .nav {
+        margin: auto;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    header .nav ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0 5px;
+        padding: 0;
+        gap: 5px;
+    }
+    header .nav ul li a{
         font-size: 15px;
-    }
+        color: #ffffff;
+        }
 }

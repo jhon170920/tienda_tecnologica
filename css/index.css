@@ -246,7 +246,7 @@ section .categoria .cont-card .cat-card:hover{
         width: 100%;
         background-color: #2a004f;
     }
-    .menu-toogle:checked ~ header .nav{
+    .menu-toggle:checked ~ .nav{
         display: block;
     }
     header .nav {
