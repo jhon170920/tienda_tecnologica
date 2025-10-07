@@ -31,8 +31,12 @@ header .logo img{
 }
 /*checkbox*/
 .menu-toggle{
-    display: none;
-    left: -9999px;
+    /* visually hide the checkbox but keep it in the accessibility tree and toggleable via the label */
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
 .menu-icon {
     display: none;
@@ -233,20 +237,43 @@ section .categoria .cont-card .cat-card:hover{
     }
     /*menu hamburguesa*/
     .menu-toggle{
-        display: none;
-}
+        /* place a transparent, clickable checkbox over the hamburger icon */
+        position: absolute;
+        right: 18px;
+        top: 12px;
+        width: 44px;
+        height: 44px;
+        opacity: 0;
+        z-index: 300;
+        cursor: pointer;
+        border: 0;
+        appearance: none;
+    }
     .menu-icon{
         display: block;
         color: #ffffff;
         margin-right: 20px;
         margin-top: 20px;
     }
+    /* make sure the label is on top and clickable */
+    .menu-icon{
+        position: relative;
+        z-index: 200;
+        cursor: pointer;
+    }
     header .nav{
         display: none;
         width: 100%;
         background-color: #2a004f;
     }
-    .menu-toggle:checked ~ .nav{
+    /* Prefer a more specific selector that matches the DOM structure */
+    /* support both general-sibling and the + label + nav chain for broader compatibility */
+    header input#menu-toggle:checked ~ nav,
+    header input#menu-toggle:checked + label + nav{
+        display: block;
+    }
+    /* fallback: show nav when header has class added by JS */
+    header.menu-open .nav{
         display: block;
     }
     header .nav {
